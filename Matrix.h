@@ -1,14 +1,10 @@
 #pragma once
 
-#include <vector>
+const int N = 5; // Размерность системы уравнений
+const double EPSILON = 0.000001; // Точность для проверки сходимости методов
+const int MAX_ITERATIONS = 100; // Максимальное количество итераций для методов
 
-class Matrix {
-public:
-    std::vector<std::vector<double>> data;
-    int rows, cols;
-
-    Matrix(int rows, int cols);
-    void setBlock(int startRow, int startCol, const Matrix& block);
-    Matrix getInverse();
-    void display() const;
-};
+// Объявление функций
+void printArray(double arr[N]);
+void simpleIterationsMethod(double a[N][N], double b[N], double x[N]);
+void seidelMethod(double a[N][N], double b[N], double x[N]);
