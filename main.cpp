@@ -5,10 +5,12 @@
 //}}
 
 #include <iostream>
+#include <iomanip>
 
 #include "SLAU.h"
 #include "Matrix.h"
 #include "MatrixInverse.h"
+#include "methodChordsTangents.h"
 
 using namespace std;
 
@@ -106,9 +108,18 @@ int main() {
 			DisplayMatrix(invA);
 			return 0;
 		}
-		case 4:
+		case 4: {
 			cout << "Выбрано задание 4." << endl;
+
+			double a = -10, b = 10, eps = 0.001; // Начальный интервал и точность.
+
+			double root = chord(a, b, eps); // Нахождение корня методом хорд.
+			cout << "Корень найденный методом хорд: " << setprecision(4) << root << endl;
+
+			root = tangent(root, eps); // Уточнение корня методом касательных.
+			cout << "Уточненный корень методом касательных: " << setprecision(4) << root << endl;
 			return 0;
+		}
 		case 5:
 			cout << "Выбрано задание 5." << endl;
 			return 0;

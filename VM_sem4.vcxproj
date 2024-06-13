@@ -130,11 +130,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="MatrixInverse.cpp" />
+    <ClCompile Include="methodChordsTangents.cpp" />
     <ClCompile Include="SLAU.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="MatrixInverse.h" />
+    <ClInclude Include="methodChordsTangents.h" />
     <ClInclude Include="SLAU.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
